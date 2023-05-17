@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .main{
+            border: 1px solid black;
+            margin-bottom: 10px;
+        }
+        .ineertitle{
+            background: rgb(212, 58, 58);
+            color: white;
+            border: 1px solid black;
+            transition: background 1s;
+            padding: 5px;
+        }
+        .ineertitle:hover{
+            background: rgb(86, 11, 11);
+        }
+        .content{
+            background-color: lightyellow;
+            border: 1px solid black;
+            padding: 5px;
+            display: none;
+        }
+        .content.active{
+            display: block;
+        }
+    </style>
+    <h1>I am According Project</h1>
+    <div>
+        <div class="main">
+            <div id="title" class="ineertitle">I am Title 1</div>
+            <div id="content" class="content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Facilis dolorum beatae quos odio ratione quia repudiandae excepturi, 
+                iste quibusdam laboriosam, maxime consectetur voluptas temporibus nihil 
+                nulla alias perspiciatis sequi veniam.
+                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Facilis dolorum beatae quos odio ratione quia repudiandae excepturi, 
+                iste quibusdam laboriosam, maxime consectetur voluptas temporibus nihil 
+                nulla alias perspiciatis sequi veniam.
+            </div>
+        </div>
+        <div class="main">
+            <div id="title" class="ineertitle">I am Title 2</div>
+            <div id="content" class="content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Facilis dolorum beatae quos odio ratione quia repudiandae excepturi, 
+                iste quibusdam laboriosam, maxime consectetur voluptas temporibus nihil 
+                nulla alias perspiciatis sequi veniam.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Facilis dolorum beatae quos odio ratione quia repudiandae excepturi, 
+                iste quibusdam laboriosam, maxime consectetur voluptas temporibus nihil 
+                nulla alias perspiciatis sequi veniam.
+            </div>
+        </div>
+        <div class="main">
+            <div id="title" class="ineertitle">I am Title 3</div>
+            <div id="content" class="content">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Facilis dolorum beatae quos odio ratione quia repudiandae excepturi, 
+                iste quibusdam laboriosam, maxime consectetur voluptas temporibus nihil 
+                nulla alias perspiciatis sequi veniam.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Facilis dolorum beatae quos odio ratione quia repudiandae excepturi, 
+                iste quibusdam laboriosam, maxime consectetur voluptas temporibus nihil 
+                nulla alias perspiciatis sequi veniam.
+            </div>
+        </div>
+    </div>
+    <script>
+        var main=document.querySelectorAll(".main");
+        
+        main.forEach(item =>{
+        var title=item.querySelector(".ineertitle");
+        var content=item.querySelector(".content");
+        title.addEventListener("click",()=>{
+        content.classList.toggle('active');
+            
+        })
+    })
+    </script>
+</body>
+</html>
