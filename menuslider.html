@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            margin:0;
+        }
+        #ma {
+            background-color: lightblue;
+            height: 30px;
+            width: 100%;
+            line-height: 100%;
+            position: fixed;
+            top: 0;
+        }
+        .ma-list{
+            background-color: rgba(4,53, 151, 0.1);
+            width: 15%;
+            height:100vh;
+            margin:0;
+            padding: 0;
+            list-style: none;
+            border: 2px solid black;
+            margin-top: 10px;
+        }
+        #ma-list.active{
+                animation: slide-in 0.3s ease-in-out;
+        }
+        #ma-list:not(.active){      
+            animation: slide-out 0.3s ease-in-out forwards;
+        }
+        @keyframes slide-in {
+            0%{
+                    transform: translateX(-100%);
+            }
+            100%{
+                    transform: translateX(0);
+            }
+            
+        }
+        @keyframes slide-out {
+            0%{
+                    transform: translateX(0);
+            }
+            100%{
+                    transform: translateX(-100%);
+            }
+            
+        }
+    </style>
+    <div id="ma">
+        <button id="btnn" class="btnn">&#9776;Menu.</button>
+        <ul id="ma-list" class="ma-list">
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+        </ul>
+    </div>
+    <script>
+       var btn= document.getElementById("btnn");
+       var list= document.getElementById("ma-list");
+       btn.addEventListener("click",function(){
+        list.classList.toggle('active');
+
+       })
+    </script>
+</body>
+</html>

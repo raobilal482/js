@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="text" id="fcs" onfocus="fcs(this)" onblur="blr(this)"> -->
+    <!-- <button id="btn" >BUTTON</button>
+    <p id="p" >hello world </p> -->
+    <!-- <input id="zz" type="text" oninput="ttext()"> -->
+    <style>
+        .divv{
+            height: 50px;
+            width: 90px;
+            color: white;
+            background-color: black;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 40px;
+            margin-left: 90%;
+            animation: ease-in-out;
+        }
+        .divvv{
+            margin-left: 90%;
+            height: 50px;
+            width: 90px;
+            color: white;
+            background-color: black;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 40px;
+            animation: ease-in-out;
+        }
+    </style>
+    <div id="pp" class="divv" >Bilal</div>
+    <div id="ppp" class="divvv" >Hadi</div>
+
+    <script>
+        var n=setInterval(anim, 100);
+        var a=0;
+        var c=900;
+        function anim (){
+            a=a+10;
+            c=c-10;
+            if(a==550 || c==450)
+            {
+                clearInterval(n);
+            }
+            else{
+            var g=document.getElementById("pp");
+            g.style.marginLeft=c+'px';
+            var t=document.getElementById("ppp");
+            t.style.marginLeft=a+'px';
+            }
+            
+        }
+        // function ttext(){
+        //     var m=document.getElementById("zz").value;
+        //     console.log(m);
+        //     document.getElementById("pp").innerHTML = m;
+            
+        //    }
+        //var z=document.getElementById("zz");
+
+        // document.getElementById("btn").addEventListener("click",swi);
+        // function swi(){
+        //     var d=5;
+        //     //document.write(d);
+            
+        //     document.getElementById("p").classList.toggle("abc");
+        // }
+         
+        //    function fcs(element){
+        //     element.style.background="grey";
+
+        //    }
+        // //    function blr(element){
+        // //     element.style.background="white";
+
+        // //    }
+        //    var blr = (element) => {
+        //     element.style.background="white";
+        //    }
+          
+        
+
+    //    var person= new Object();
+    //    person.fname="bilal";
+    //    person.age=28;
+    //    document.write(person.fname);
+    //    c.forEach(function(a,i){
+    //     document.write(i+a+"<br>");
+
+    //    })
+    
+    </script>
+</body>
+</html>

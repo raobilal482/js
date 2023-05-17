@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        .cal{
+            height: 280px;
+            width: 16%;
+            margin: auto;
+            background-color: black;
+            border-radius: 2%;
+            color: white;
+            text-align: center;
+        }
+        input{
+            width: 90%;
+            height: 30px;
+        }
+       .btns{
+        margin-top: 5%;
+       }
+        .btn{
+            margin-left: 2%;
+            height: 40px;
+            width: 20%;
+        }
+        button{
+            background: linear-gradient(to right, rgb(33, 32, 32), rgb(72, 72, 212)); 
+            color: white;
+            border-radius: 2px;
+        
+       }
+    </style>
+    <div class="cal">
+        
+        <div>
+            <h1>Calculater</h1>
+            <input id="inbox" type="text">
+           
+
+        </div>
+        <div class="btns">
+            <!-- <input type="button" id="bone" class="btn" onclick="onej()" value="1"></input> -->
+            <button id="bone" class="btn"  value="1" data-number>1</button>
+            <button id="btwo" class="btn"  value="2" data-number>2</button>
+            <button id="thr" class="btn"  value="3" data-number>3</button>
+            <button class="btn" data-operation>+</button>
+        </div>
+        <div class="btns">
+            <button id="fr" class="btn"  value="4" data-number>4</button>
+            <button id="fv" class="btn"  value="5" data-number>5</button>
+            <button id="sx" class="btn" value="6" data-number>6</button>
+            <button class="btn" data-operation>-</button>
+        </div>
+        <div class="btns">
+            <button id="sv" class="btn"  value="7" data-number>7</button>
+            <button id="ei" class="btn"  value="8" data-number>8</button>
+            <button id="ni" class="btn" value="9" data-number>9</button>
+            <button class="btn" data-operation>*</button>
+        </div>
+        <div class="btns">
+            <button class="btn" data-allc>ac</button>
+            <button id="ze" class="btn"  value="0" data-number>0</button>
+            <button class="btn" data-equal>=</button>
+            <button class="btn" data-operation>/</button>
+            
+        </div>
+    </div>
+    <script>
+    var a=" ";
+    var buttons=document.querySelectorAll(".btn");
+    Array.from(buttons).forEach((buttons)=>{
+        buttons.addEventListener('click',(e)=>{
+            if(e.target.innerHTML== '='){
+                a=eval(a);
+                document.querySelector('input').value=a;
+            }
+            else if(e.target.innerHTML== 'ac'){
+                a=" ";
+                document.querySelector('input').value=a;
+            }
+            else{
+            console.log(e.target);
+            a=a+e.target.innerHTML;
+            document.querySelector('input').value=a;}
+
+        })
+    })
+       
+  
+        
+    
+
+    </script>
+</body>
+</html>
