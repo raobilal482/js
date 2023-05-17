@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .str{
+            
+            width: 10%;
+            transition:  0.5s ease;
+        }
+        
+
+    </style>
+    <div class="str" id="strname">h</div>
+    <script>
+        var a=0;
+        var str="Bilal";
+        this.document.write("Original string is :"+str)
+        var str1 =str.split("");
+        str1.pop();
+        var str2=str1.join(" ");
+        
+        var divID=document.getElementById("strname");
+        divID.innerHTML = str2;
+        setInterval(function(){
+            a += 10;
+            divID.style.marginLeft = a +'px';
+        }, 500);
+         
+    </script>
+</body>
+</html>
